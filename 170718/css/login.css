@@ -1,0 +1,67 @@
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #e8f8ff;
+		}
+		section{
+			margin: 0;
+
+		}
+		
+		.left_img{
+			display: inline-block;
+			float: left;
+			width: 800px;
+			height: 700px;
+			margin: 10px;
+			border-right: 1px solid #ccc;
+		}
+		.img{
+			margin: 100px 100px;
+			height: 400px;
+			width: 600px;
+			background: url(../img/welcome.jpg) no-repeat;
+			background-size: 100%;
+		}
+		.right_login{
+			display: inline-block;
+			margin: 100px 0 0 30px;
+			width: 400px;
+			border: 1px solid #ccc;
+			box-shadow: 10px 10px 5px #888888;
+			background-color: white;
+			border-radius: 20px;
+		}
+		.show_welcome{
+			font-size: 25px;
+			margin: 10px;
+		}
+		.denglu{
+			width: 100px;
+			margin: 10px auto;
+			height: 50px;
+			line-height: 50px;
+			text-align:center;
+			font-size: 23px;
+		}
+		.form_login{
+			width: 258px;
+			margin: 10px auto 100px;
+		}
+		.inputUsername,.inputPassword{
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			outline: none;
+			border-bottom: 1px solid #ccc;
+		}
+		.inputUsername,.inputPassword{
+			height: 32px;
+			width: 230px;
+			margin-left: 8px;
+		}
+		.btn_login{
+			height: 36px;
+			width: 258px;
+			border-radius: 5px;
+		}

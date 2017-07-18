@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>企业薪酬管理系统</title>
+
+	<script type="text/javascript" src=".\jquery.js"></script>
+
+	<link rel="stylesheet" type="text/css" href=".\bootstrap\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href=".\css\header.css">
+	<link rel="stylesheet" type="text/css" href=".\css\body_left.css">
+	<link rel="stylesheet" type="text/css" href=".\css\body_right.css">
+
+
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.main_body{
+			margin:10px 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="project_name">企业薪酬管理系统</div>
+		<div class="user_message">hi</div>
+	</div>
+	<section style="position: relative;">
+		<div class="main_body">
+			<div class="body_left">
+				<div class="left_menu">
+					<ul class="ul_left_menu" style="cursor: pointer;">
+						
+						<li class="li_index li_left_menu">
+							<span class="glyphicon glyphicon-home" aria-hidden="true"></span>首页
+						</li>
+						
+						<li class="li_imformatioin_manage li_left_menu">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>基础信息管理
+						</li>
+							<li class="li_dept_manage imformation_manage_li" style="display: none;">部门管理</li>
+							<li class="li_job_manage imformation_manage_li" style="display: none;">岗位管理</li>
+							<li class="li_emp_manage imformation_manage_li" style="display: none;">员工管理</li>
+						
+						<li class="sal_manage li_left_menu">
+							<span class="glyphicon glyphicon-list" aria-hidden="true"></span>工资管理
+						</li>
+							<li class="li_salproject sal_manage_li" style="display: none;">工资项目管理</li>
+							<li class="li_regularsal sal_manage_li" style="display: none;">固定工资维护</li>
+							<li class="li_enterdata sal_manage_li" style="display: none;">导入数据录入</li>
+							<li class="li_salsettle sal_manage_li" style="display: none;">工资结算</li>
+						
+						<li class="li_aboutus li_left_menu">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>关于我们
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="body_right" style="display: inline-block;">
+				<div class="div_index">
+					welcome!
+				</div>
+				<div class="div_dept_manage" style="display: none;">
+					<div class="dept_manage_div">
+						<div class="dept_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQuerydept">查询部门</li>
+								<li class="choseAdddept" >增加部门</li>
+							</ul>
+						</div><hr/>
+						<div class="query_dept">
+							<h4>请输入部门编号或名称进行查询：</h4>
+							<div class="div_form_querydept">
+								<form action="" name="" class="form_querydept">
+									请输入部门编号：<br/>
+									<input type="text" placeholder="部门编号" name="" value=""><br/><br/>
+									请输入部门名称：<br/>
+									<input type="text" placeholder="部门名称" name="" value=""><br/><br/>
+									<button class="btn btn-primary" type="button">提交</button>
+								</form>
+							</div>
+						</div>
+						<div class="add_dept" style="display: none;">
+							<h4>请输入新增部门的信息：</h4>
+							
+						</div>
+					</div>
+				</div>
+				<div class="div_job_manage" style="display: none;">
+					<div class="job_manage_div">
+						<div class="job_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQueryjob">查询岗位</li>
+								<li class="choseAddjob" >增加岗位</li>
+							</ul>
+						</div><hr/>
+						<div class="query_job">
+							<h4>请输入岗位编号或名称进行查询：</h4>
+							<div class="div_form_queryjob">
+								<form action="" name="" class="form_queryjob">
+									请输入岗位编号：<br/>
+									<input type="text" placeholder="岗位编号" name="" value=""><br/><br/>
+									请输入岗位名称：<br/>
+									<input type="text" placeholder="岗位名称" name="" value=""><br/><br/>
+									<button class="btn btn-primary" type="button">提交</button>
+								</form>
+							</div>
+						</div>
+						<div class="add_job" style="display: none;">
+							<h4>请输入新增岗位的信息：</h4>
+						</div>
+					</div>
+				</div>
+				<div class="div_emp_manage" style="display: none;">
+					<div class="emp_manage_div">
+						<div class="emp_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQueryemp">查询员工</li>
+								<li class="choseAddemp" >增加员工</li>
+							</ul>
+						</div><hr/>
+						<div class="query_emp">
+							<h4>请输入员工编号或名称进行查询：</h4>
+							<div class="div_form_queryemp">
+								<form action="" name="" class="form_queryemp">
+									请输入员工编号：<br/>
+									<input type="text" placeholder="员工编号" name="" value=""><br/><br/>
+									请输入员工名称：<br/>
+									<input type="text" placeholder="员工名称" name="" value=""><br/><br/>
+									<button class="btn btn-primary" type="button">提交</button>
+								</form>
+							</div>
+						</div>
+						<div class="add_emp" style="display: none;">
+							<h4>请输入新增员工的信息：</h4>
+						</div>
+					</div>
+				</div>
+				<div class="div_salproject" style="display: none;">
+					<div class="salproject_div">
+						<h4>工资项目信息列表</h4><hr/>
+
+					</div>
+				</div>
+				<div class="div_regularsal" style="display: none;">
+					<div class="regularsal_div">
+						<div class="regularsal_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQuery_regularsal">查询固定工资信息</li>
+								<li class="choseUpdata_regularsal" >维护固定工资信息</li>
+							</ul>
+						</div><hr/>
+						<div class="query_regularsal">
+							<h4>请输入员工编号或部门编号进行查询：</h4>
+							<div class="div_form_query_regularsal">
+								<form action="" name="" class="form_query_regularsal">
+									请输入员工编号：<br/>
+									<input type="text" placeholder="员工编号" name="" value=""><br/><br/>
+									请输入部门编号：<br/>
+									<input type="text" placeholder="部门编号" name="" value=""><br/><br/>
+									<button class="btn btn-primary" type="button">提交</button>
+								</form>
+							</div>
+						</div>
+						<div class="updata_regularsal" style="display: none;">
+							<h4>请输入固定工资信息：</h4>
+						</div>
+					</div>
+				</div>
+				<div class="div_enterdata" style="display: none;">
+					<div class="enterdata_div">
+						<div class="enterdata_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQuery_enterdata">查询导入项目信息</li>
+								<li class="choseUpdata_enterdata" >维护导入项目信息</li>
+							</ul>
+						</div><hr/>
+						<div class="query_enterdata">
+							<h4>请输入相应条件进行查询：</h4>
+							<div class="div_form_query_enterdata">
+								<form action="" name="" class="form_query_enterdata">
+									请输入部门名称：
+									<input type="text" placeholder="部门名称" name="" value=""><br/><br/>
+									请输入员工编号：
+									<input type="text" placeholder="员工编号" name="" value=""><br/><br/>
+									请输入开始日期：
+									<input type="date" placeholder="开始日期" name="" value=""><br/><br/>
+									请输入结束日期：
+									<input type="date" placeholder="结束日期" name="" value=""><br/><br/>
+									<button class="btn btn-primary" type="button">提交</button>
+								</form>
+							</div>
+						</div>
+						<div class="updata_enterdata" style="display: none;">
+							<h4>请输入导入项目信息：</h4>
+						</div>
+					</div>
+				</div>
+				<div class="div_salsettle" style="display: none;">
+					<div class="salsettle_div">
+						<h4>工资结算</h4><hr/>
+						<div class="div_form_salsettle">
+							<form action="" name="" class="form_salsettle">
+								请输入部门编号：<br/>
+								<input type="text" placeholder="部门编号" name="" value=""><br/><br/>
+								<button class="btn btn-primary" type="button">提交</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="div_aboutus" style="display: none;">
+					about us
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src=".\js\body_left.js"></script>
+	<script type="text/javascript" src=".\js\body_right.js"></script>
+
+</body>
+</html>

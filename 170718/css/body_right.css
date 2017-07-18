@@ -1,0 +1,248 @@
+.body_right{
+	margin:20px 0 0 30px;
+}
+
+.body_right > div{
+	width: 900px;
+	min-height: 600px;
+}
+/* ---------------------------------------------部门管理----------------- */
+.dept_manage_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.dept_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+}
+.choseQuerydept,.choseAdddept{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:300px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQuerydept{
+	border-right: 1px solid #aaa;
+}
+.choseQuerydept:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseAdddept:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.div_form_querydept{
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+.form_querydept{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* ------------------------------------------岗位管理-------------------- */
+.job_manage_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.job_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+}
+.choseQueryjob,.choseAddjob{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:300px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQueryjob{
+	border-right: 1px solid #aaa;
+}
+.choseQueryjob:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseAddjob:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.div_form_queryjob{
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+.form_queryjob{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* -------------------------------------------员工管理------------------- */
+.emp_manage_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.emp_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+}
+.choseQueryemp,.choseAddemp{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:300px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQueryemp{
+	border-right: 1px solid #aaa;
+}
+.choseQueryemp:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseAddemp:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.div_form_queryemp{
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+.form_queryemp{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* -------------------------------------工资项目管理---------------------------------- */
+.salproject_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+
+/* -------------------------------------------固定工资管理------------------- */
+.regularsal_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.regularsal_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+}
+.choseQuery_regularsal,.choseUpdata_regularsal{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:300px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQuery_regularsal{
+	border-right: 1px solid #aaa;
+}
+.choseQuery_regularsal:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdata_regularsal:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.div_form_query_regularsal{
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+.form_query_regularsal{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+
+/* -------------------------------------------导入项目管理------------------- */
+.enterdata_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.enterdata_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+}
+.choseQuery_enterdata,.choseUpdata_enterdata{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:300px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQuery_enterdata{
+	border-right: 1px solid #aaa;
+}
+.choseQuery_enterdata:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdata_enterdata:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.div_form_query_enterdata{
+	width: 500px;
+	height: 250px;
+	margin: 10px auto;
+}
+.form_query_enterdata{
+	height: 100%;
+	width: 350px;
+	margin: 0 auto;
+}
+
+/* ----------------------------------------工资结算--------------------------------------- */
+.salsettle_div{
+	width: 800px;
+	min-height: 600px;
+	margin:10px auto;
+	border: 1px solid #aaa;
+}
+.div_form_salsettle{
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+.form_salsettle{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}

@@ -26,9 +26,9 @@ function dept(){
 		// param = JSON.stringify(param);
 		publicDom.post(loginUrl,param,function(response){
 				if (response.code == 1001) {
-					$('.dept_manage_div').append("<div class="panel panel-default hide_adddiv adddiv_querydept">"+
-						"<div class="panel-heading">部门信息</div>"+
-						"<table class="table addtr_querydept">"+
+					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
+						"<div class='panel-heading'>部门信息</div>"+
+						"<table class='table addtr_querydept'>"+
 						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
 						"</table></div>");
 					var dept = response.data;
@@ -39,10 +39,10 @@ function dept(){
 					
 				}
 				else {
-					layer.msg(response.message);
+					layer.msg('错误');
 				}
 			},function(err){
-				layer.msg(response.message);
+				layer.msg('错误');
 			});
 	})
 
@@ -78,10 +78,10 @@ function dept(){
 					layer.msg('添加成功');
 				}
 				else {
-					layer.msg(response.message);
+					layer.msg('错误');
 				}
 			},function(err){
-				layer.msg(response.message);
+				layer.msg('错误');
 			});
 	})
 }

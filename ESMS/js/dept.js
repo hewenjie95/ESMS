@@ -10,7 +10,7 @@ function dept(){
 		$('.hide_adddiv').remove();
 		
 		var deptcondition = $('.get_deptcondition').val();
-		var loginUrl = 'dept/query';
+		var queryUrl = 'dept/query';
 		if($('.get_deptcondition').val()==""){
 			layer.msg('查询条件不能为为空！',function(){
 				return false;
@@ -23,7 +23,7 @@ function dept(){
 				query: deptcondition
 		};
 		// param = JSON.stringify(param);
-		publicDom.post(loginUrl,param,function(response){
+		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
 						"<div class='panel-heading'>部门信息</div>"+
@@ -49,14 +49,14 @@ function dept(){
 		$('.hide_adddiv').remove();
 		
 		var deptcondition = '';
-		var loginUrl = 'dept/query';
+		var queryUrl = 'dept/query';
 		/*console.log(user_name);
 		console.log(user_password);*/
 		var param = {
 				query: deptcondition
 		};
 		// param = JSON.stringify(param);
-		publicDom.post(loginUrl,param,function(response){
+		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
 						"<div class='panel-heading'>部门信息</div>"+
@@ -86,7 +86,7 @@ function dept(){
 		var deptno = $('.get_deptno').val();
 		var dname = $('.get_dname').val();
 		var loc = $('.get_loc').val();
-		var loginUrl = 'dept/insert';
+		var addUrl = 'dept/insert';
 		if($('.get_deptno').val()==""||$('.get_dname').val()==""||$('.get_loc').val()==""){
 			layer.msg('请输入完整的部门信息',function(){
 				return false;
@@ -107,7 +107,7 @@ function dept(){
 				loc: loc
 		};
 		// param = JSON.stringify(param);
-		publicDom.post(loginUrl,param,function(response){
+		publicDom.post(addUrl,param,function(response){
 				if (response.code == 1001) {
 					layer.msg('添加成功');
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
@@ -152,6 +152,7 @@ function dept(){
 		// param = JSON.stringify(param);
 		publicDom.post(updateUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('修改成功');
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
 						"<div class='panel-heading'>部门信息</div>"+
 						"<table class='table addtr_querydept'>"+
@@ -172,7 +173,7 @@ function dept(){
 			});
 	})
 
-/*----------------------------------------------------------------------------修改部门-------------------------------------------*/
+/*----------------------------------------------------------------------------删除部门-------------------------------------------*/
 	$('.btn_del_dept').click(function(){
 		$('.hide_adddiv').remove();
 		var deptno = $('.del_get_deptno').val();

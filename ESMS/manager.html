@@ -25,12 +25,15 @@
 			list-style: none;
 		}
 
+
 	</style>
 </head>
 <body>
 	<div class="header">
 		<div class="project_name">企业薪酬管理系统</div>
-		<div class="user_message">hi</div>
+		<div class="user_message">
+			<a href="login.html">[退出]</a>
+		</div>
 	</div>
 	<section style="position: relative;">
 		<div class="main_body">
@@ -101,7 +104,7 @@
 							</form>
 						</div>
 						<div class="update_dept" style="display: none;">
-							<h4>请输入修改部门的编号：</h4>
+							<h4>请输入修改部门的信息：</h4>
 							<form action="" name="" class="myform form_updatedept">
 								<input type="text" placeholder="部门编号" class="update_get_deptno"><br/><br/>
 								<input type="text" placeholder="部门名称" class="update_get_dname"><br/><br/>
@@ -133,30 +136,33 @@
 						</div><hr/>
 						<div>
 						<div class="query_job">
-							<h4>请输入岗位编号或名称进行查询：</h4>
+							<h4>请输入岗位编号、名称、工资范围进行查询：</h4><br/>
 							<div class="div_form_queryjob">
 								<form action="" name="" class="myform form_queryjob">
-									<input type="text" placeholder="岗位编号/名称" class="get_jobcondition"><br/><br/>
+									<input type="text" placeholder="岗位编号" class="get_jobno"><br/><br/>
+									<input type="text" placeholder="岗位名称" class="get_jname"><br/><br/>
+									工资范围：<br/><br/>
+									<input type="text" placeholder="" class="get_minsal" style="width: 90px;">---
+									<input type="text" placeholder="" class="get_maxsal" style="width: 90px;"><br/><br/>
 									<button class="btn btn-primary btn_query_job" type="button">查询</button><br/><br/>
-									<button class="btn btn-primary btn_queryall_job" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
 						<div class="add_job" style="display: none;">
 							<h4>请输入新增岗位的信息：</h4>
 							<form action="" name="" class="myform form_addjob">
-								<input type="text" placeholder="岗位编号" class="get_jobno"><br/><br/>
-								<input type="text" placeholder="岗位名称" class="get_dname"><br/><br/>
-								<input type="text" placeholder="岗位地址" class="get_loc"><br/><br/>
+								<input type="text" placeholder="岗位编号" class="add_get_jobno"><br/><br/>
+								<input type="text" placeholder="岗位名称" class="add_get_jname"><br/><br/>
+								<input type="text" placeholder="岗位基本工资" class="add_get_basesal"><br/><br/>
 								<button class="btn btn-primary btn_add_job" type="button">提交</button>
 							</form>
 						</div>
 						<div class="update_job" style="display: none;">
-							<h4>请输入修改岗位的编号：</h4>
+							<h4>请输入修改岗位的信息：</h4>
 							<form action="" name="" class="myform form_updatejob">
 								<input type="text" placeholder="岗位编号" class="update_get_jobno"><br/><br/>
-								<input type="text" placeholder="岗位名称" class="update_get_dname"><br/><br/>
-								<input type="text" placeholder="岗位地址" class="update_get_loc"><br/><br/>
+								<input type="text" placeholder="岗位名称" class="update_get_jname"><br/><br/>
+								<input type="text" placeholder="岗位基本工资" class="update_get_basesal"><br/><br/>
 								<button class="btn btn-primary btn_update_job" type="button">提交</button>
 							</form>
 						</div>
@@ -184,10 +190,10 @@
 						</div><hr/>
 						<div>
 						<div class="query_emp">
-							<h4>请输入员工编号或名称进行查询：</h4>
+							<h4>请输入部门编号或名称进行查询：</h4>
 							<div class="div_form_queryemp">
 								<form action="" name="" class="myform form_queryemp">
-									<input type="text" placeholder="员工编号/名称" class="get_empcondition"><br/><br/>
+									<input type="text" placeholder="部门编号/名称" class="get_empcondition"><br/><br/>
 									<button class="btn btn-primary btn_query_emp" type="button">查询</button><br/><br/>
 									<button class="btn btn-primary btn_queryall_emp" type="button">查询所有</button>
 								</form>
@@ -196,25 +202,33 @@
 						<div class="add_emp" style="display: none;">
 							<h4>请输入新增员工的信息：</h4>
 							<form action="" name="" class="myform form_addemp">
-								<input type="text" placeholder="员工编号" class="get_empno"><br/><br/>
-								<input type="text" placeholder="员工名称" class="get_dname"><br/><br/>
-								<input type="text" placeholder="员工地址" class="get_loc"><br/><br/>
+								<input type="text" placeholder="员工编号" class="addemp_get_empno">
+								<input type="text" placeholder="员工名称" class="addemp_get_ename"><br/><br/>
+								<input type="text" placeholder="部门编号" class="addemp_get_deptno">
+								<input type="text" placeholder="员工性别" class="addemp_get_sex"><br/><br/>
+								<input type="text" placeholder="员工年龄" class="addemp_get_age">
+								<input type="text" placeholder="岗位编号" class="addemp_get_jobno"><br/><br/>
+								雇用日期：<input type="date" placeholder="雇用日期" class="addemp_get_date"><br/><br/>
 								<button class="btn btn-primary btn_add_emp" type="button">提交</button>
 							</form>
 						</div>
 						<div class="update_emp" style="display: none;">
-							<h4>请输入修改员工的编号：</h4>
+							<h4>请输入修改员工的信息：</h4>
 							<form action="" name="" class="myform form_updateemp">
-								<input type="text" placeholder="员工编号" class="update_get_empno"><br/><br/>
-								<input type="text" placeholder="员工名称" class="update_get_dname"><br/><br/>
-								<input type="text" placeholder="员工地址" class="update_get_loc"><br/><br/>
+								<input type="text" placeholder="员工编号" class="updateemp_get_empno">
+								<input type="text" placeholder="员工名称" class="updateemp_get_ename"><br/><br/>
+								<input type="text" placeholder="部门编号" class="updateemp_get_deptno">
+								<input type="text" placeholder="员工性别" class="updateemp_get_sex"><br/><br/>
+								<input type="text" placeholder="员工年龄" class="updateemp_get_age">
+								<input type="text" placeholder="岗位编号" class="updateemp_get_jobno"><br/><br/>
+								雇用日期：<input type="date" placeholder="雇用日期" class="updateemp_get_date"><br/><br/>
 								<button class="btn btn-primary btn_update_emp" type="button">提交</button>
 							</form>
 						</div>
 						<div class="del_emp" style="display: none;">
 							<h4>请输入删除员工的编号：</h4>
 							<form action="" name="" class="myform form_delemp">
-								<input type="text" placeholder="员工编号" class="del_get_empno"><br/><br/>
+								<input type="text" placeholder="员工编号" class="delemp_get_empno"><br/><br/>
 								<button class="btn btn-primary btn_del_emp" type="button">提交</button>
 							</form>
 						</div>
@@ -255,7 +269,7 @@
 							</form>
 						</div>
 						<div class="update_salproject" style="display: none;">
-							<h4>请输入修改工资项目的编号：</h4>
+							<h4>请输入修改工资项目的信息：</h4>
 							<form action="" name="" class="myform form_updatesalproject">
 								<input type="text" placeholder="工资项目编号" class="update_get_salprojectno"><br/><br/>
 								<input type="text" placeholder="工资项目名称" class="update_get_dname"><br/><br/>
@@ -359,5 +373,6 @@
 	<script type="text/javascript" src=".\js\body_left.js"></script>
 	<script type="text/javascript" src=".\js\body_right.js"></script>
 	<script type="text/javascript" src=".\js\dept.js"></script>
+	<script type="text/javascript" src=".\js\job.js"></script>
 </body>
 </html>

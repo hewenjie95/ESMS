@@ -171,16 +171,19 @@
 	margin: 0 auto;
 }
 .form_addemp{
-	width: 200px;
+	width: 400px;
 	margin: 0 auto;
 }
 .form_updateemp{
-	width: 200px;
+	width: 400px;
 	margin: 0 auto;
 }
 .form_delemp{
 	width: 200px;
 	margin: 0 auto;
+}
+.addemp_get_date,.updateemp_get_date{
+	height: 24px;
 }
 /* -------------------------------------工资项目管理---------------------------------- */
 .salproject_manage_div{

@@ -20,3 +20,13 @@
 	display: inline-block;
 	float: right;
 }
+
+a{
+	line-height: 50px;
+	font-size: 10px;
+	color: white;
+	margin-right: 10px;
+}
+a:hover{
+	color: #46fdfd;
+}

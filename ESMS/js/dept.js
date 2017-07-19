@@ -1,5 +1,4 @@
 $(function(){
-	$('.hide_adddiv').remove();
 	dept();
 });
 
@@ -24,13 +23,15 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
-							"<td><button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
 							"</td></tr>");
-					}					
+					}				
 				}
 				else {
 					layer.msg('错误');
@@ -57,10 +58,12 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
-							"<td><button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
 							"</td></tr>");
 					}
@@ -103,10 +106,12 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
-							"<td><button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default' aria-label='Left Align'>"+
+							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
 							"</td></tr>");
 					}
@@ -168,5 +173,9 @@ function dept(){
 			},function(err){
 				layer.msg('错误');
 			});
+	})
+
+	$('.btn_updata').on('click',function(){
+		$(this).parents('.trBox').find('input').attr('disable','false');
 	})
 }

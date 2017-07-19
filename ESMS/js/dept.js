@@ -23,9 +23,9 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable value='"+dept[i].deptno+"'></input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable value='"+dept[i].dname+"'></input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable value='"+dept[i].loc+"'></input></td>"+
 							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
 							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
@@ -58,9 +58,9 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable value='"+dept[i].deptno+"'></input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable value='"+dept[i].dname+"'></input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable value='"+dept[i].loc+"'></input></td>"+
 							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
 							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
@@ -106,9 +106,9 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable='true'>"+dept[i].deptno+"</input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disable='true'>"+dept[i].dname+"</input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disable='true'>"+dept[i].loc+"</input></td>"+
+							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disable value='"+dept[i].deptno+"'></input></td>"+
+							"<td class='td_dname'><input class='input_disable input_dname' disable value='"+dept[i].dname+"'></input></td>"+
+							"<td class='td_loc'><input class='input_disable input_loc' disable value='"+dept[i].loc+"'></input></td>"+
 							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
   							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
 							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+

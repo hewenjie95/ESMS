@@ -38,6 +38,6 @@ var publicDom = {
 		if (data.t == undefined || data.t == null ){
 			data.t = publicDom.token;
 		}
-		publicDom.myAjax("get",publicDom.base_url+url,data,successCallback,errorCallback,false);
+		publicDom.myAjax("post",publicDom.base_url+url,data,successCallback,errorCallback,false);
 	}
 };

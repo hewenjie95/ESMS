@@ -1,6 +1,6 @@
 var publicDom = {
 	isDebug:true,
-	base_url:'http://localhost:8080/',
+	base_url:'http://esms.s1.natapp.cc/',
 	// 获取url的参数
 	getParamByUrl: function() {
 	   var url = window.location.search; //获取url中"?"符后的字串

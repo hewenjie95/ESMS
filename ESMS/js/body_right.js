@@ -3,13 +3,13 @@ $('.choseQuerydept').on('click',function(){
 	$('.query_dept').show();
 	$('.add_dept').hide();
 	$('.hide_adddiv').remove();
-	$()
+	$('input').val()='';
 });
 $('.choseAdddept').on('click',function(){
 	$('.add_dept').show();
 	$('.query_dept').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 
 /*-------------------------------------------------岗位管理------------------------------*/
@@ -17,13 +17,13 @@ $('.choseQueryjob').on('click',function(){
 	$('.query_job').show();
 	$('.add_job').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 $('.choseAddjob').on('click',function(){
 	$('.add_job').show();
 	$('.query_job').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 
 /*-------------------------------------------------员工管理------------------------------*/
@@ -31,13 +31,13 @@ $('.choseQueryemp').on('click',function(){
 	$('.query_emp').show();
 	$('.add_emp').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 $('.choseAddemp').on('click',function(){
 	$('.add_emp').show();
 	$('.query_emp').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 
 /*-------------------------------------------------固定工资管理------------------------------*/
@@ -45,13 +45,13 @@ $('.choseQuery_regularsal').on('click',function(){
 	$('.query_regularsal').show();
 	$('.updata_regularsal').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 $('.choseUpdata_regularsal').on('click',function(){
 	$('.updata_regularsal').show();
 	$('.query_regularsal').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 
 /*-------------------------------------------------导入项目管理------------------------------*/
@@ -59,13 +59,13 @@ $('.choseQuery_enterdata').on('click',function(){
 	$('.query_enterdata').show();
 	$('.updata_enterdata').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 $('.choseUpdata_enterdata').on('click',function(){
 	$('.updata_enterdata').show();
 	$('.query_enterdata').hide();
 	$('.hide_adddiv').remove();
-	$('.myform').reset();
+	$('input').val()='';
 });
 
 /*-------------------------------------------------工资结算------------------------------------------*/

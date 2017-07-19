@@ -5,7 +5,7 @@ $(function(){
 
 
 function dept(){
-	/*--------------------------------------------------------------------------------------------------------------------------------*/
+	/*-------------------------------------------------------------加载所有部门-------------------------------------------------------------------*/
 	$('.li_dept_manage').on('click',function(){
 		$('.hide_adddiv').remove();
 		var loginUrl = 'dept/query';
@@ -24,9 +24,13 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
-					}
-					
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
+							"<td><button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>"+
+							"<button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>"+
+							"</td></tr>");
+					}					
 				}
 				else {
 					layer.msg('错误');
@@ -53,7 +57,12 @@ function dept(){
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
+							"<td><button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>"+
+							"<button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>"+
+							"</td></tr>");
 					}
 					
 				}
@@ -89,12 +98,17 @@ function dept(){
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
 						"<div class='panel-heading'>部门信息</div>"+
 						"<table class='table addtr_querydept'>"+
-						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th><th>操作</th></tr></tbody>"+	
 						"</table></div>");
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td>"+
+							"<td><button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>"+
+							"<button type="button" class="btn btn-default" aria-label="Left Align">"+
+  							"<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>"+
+							"</td></tr>");
 					}
 					
 				}

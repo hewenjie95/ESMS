@@ -1,0 +1,87 @@
+$(function(){
+	$('.hide_adddiv').remove();
+	dept();
+});
+
+
+function dept(){
+
+/*----------------------------------------------------------------------------查询部门-------------------------------------------*/
+	$('.btn_query_dept').click(function(){
+		$('.adddiv_querydept').remove();
+		
+		var deptcondition = $('.get_deptcondition').val();
+		var loginUrl = 'dept/query';
+		if($('.get_deptcondition').val()==""){
+			layer.msg('查询条件不能为为空！',function(){
+				return false;
+			});
+			return false;
+		};
+		/*console.log(user_name);
+		console.log(user_password);*/
+		var param = {
+				query: deptcondition
+		};
+		// param = JSON.stringify(param);
+		publicDom.post(loginUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.dept_manage_div').append("<div class="panel panel-default hide_adddiv adddiv_querydept">"+
+						"<div class="panel-heading">部门信息</div>"+
+						"<table class="table addtr_querydept">"+
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
+						"</table></div>");
+					var dept = response.data;
+					for( var i=0;i < dept.length;i++ ){
+						$('.addtr_querydept').append(
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+					}
+					
+				}
+				else {
+					layer.msg(response.message);
+				}
+			},function(err){
+				layer.msg(response.message);
+			});
+	})
+
+
+/*-------------------------------------------------------增加部门------------------------------------------*/
+	$('.btn_add_dept').click(function(){
+		var deptno = $('.get_deptno').val();
+		var dname = $('.get_dname').val();
+		var loc = $('.get_loc').val();
+		var loginUrl = 'dept/insert';
+		if($('.get_deptdeptno').val()==""||$('.get_deptdname').val()==""||$('.get_deptdloc').val()==""){
+			layer.msg('请输入完整的部门信息',function(){
+				return false;
+			});
+			return false;
+		};
+		if($('.get_deptdeptno').val().length>4){
+			layer.msg('部门编号长度不能大于4',function(){
+				return false;
+			});
+			return false;
+		};
+		/*console.log(user_name);
+		console.log(user_password);*/
+		var param = {
+				deptno: deptno,
+				dname: dname,
+				loc: loc
+		};
+		// param = JSON.stringify(param);
+		publicDom.post(loginUrl,param,function(response){
+				if (response.code == 1001) {
+					layer.msg('添加成功');
+				}
+				else {
+					layer.msg(response.message);
+				}
+			},function(err){
+				layer.msg(response.message);
+			});
+	})
+}

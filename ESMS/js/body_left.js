@@ -24,8 +24,8 @@ $('.li_emp_manage').on('click',function(){
 	$('.div_emp_manage').siblings().hide();
 });
 $('.li_salproject').on('click',function(){
-	$('.div_salproject').show();
-	$('.div_salproject').siblings().hide();
+	$('.div_salproject_manage').show();
+	$('.div_salproject_manage').siblings().hide();
 });
 $('.li_regularsal').on('click',function(){
 	$('.div_regularsal').show();

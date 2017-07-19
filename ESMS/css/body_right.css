@@ -19,16 +19,16 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQuerydept,.choseAdddept{
+.choseQuerydept,.choseAdddept,.choseUpdatedept,.choseDeldept{
 	display: inline-block;
 	float: left;
 	height: 40px;
-	width:300px; 
+	width:150px; 
 	background-color: #9cf;
 	line-height: 40px;
 	text-align: center;
 }
-.choseQuerydept{
+.choseQuerydept,.choseAdddept,.choseUpdatedept{
 	border-right: 1px solid #aaa;
 }
 .choseQuerydept:hover{
@@ -39,10 +39,13 @@
 	font-size: 20px;
 	cursor: pointer;
 }
-.div_form_querydept{
-	width: 400px;
-	height: 200px;
-	margin: 10px auto;
+.choseDeldept:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdatedept:hover{
+	font-size: 20px;
+	cursor: pointer;
 }
 .form_querydept{
 	height: 100%;
@@ -50,6 +53,14 @@
 	margin: 0 auto;
 }
 .form_adddept{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_updatedept{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_deldept{
 	width: 200px;
 	margin: 0 auto;
 }
@@ -67,16 +78,16 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQueryjob,.choseAddjob{
+.choseQueryjob,.choseAddjob,.choseUpdatejob,.choseDeljob{
 	display: inline-block;
 	float: left;
 	height: 40px;
-	width:300px; 
+	width:150px; 
 	background-color: #9cf;
 	line-height: 40px;
 	text-align: center;
 }
-.choseQueryjob{
+.choseQueryjob,.choseAddjob,.choseUpdatejob{
 	border-right: 1px solid #aaa;
 }
 .choseQueryjob:hover{
@@ -87,13 +98,28 @@
 	font-size: 20px;
 	cursor: pointer;
 }
-.div_form_queryjob{
-	width: 400px;
-	height: 200px;
-	margin: 10px auto;
+.choseDeljob:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdatejob:hover{
+	font-size: 20px;
+	cursor: pointer;
 }
 .form_queryjob{
 	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+.form_addjob{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_updatejob{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_deljob{
 	width: 200px;
 	margin: 0 auto;
 }
@@ -111,16 +137,16 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQueryemp,.choseAddemp{
+.choseQueryemp,.choseAddemp,.choseUpdateemp,.choseDelemp{
 	display: inline-block;
 	float: left;
 	height: 40px;
-	width:300px; 
+	width:150px; 
 	background-color: #9cf;
 	line-height: 40px;
 	text-align: center;
 }
-.choseQueryemp{
+.choseQueryemp,.choseAddemp,.choseUpdateemp{
 	border-right: 1px solid #aaa;
 }
 .choseQueryemp:hover{
@@ -131,23 +157,88 @@
 	font-size: 20px;
 	cursor: pointer;
 }
-.div_form_queryemp{
-	width: 400px;
-	height: 200px;
-	margin: 10px auto;
+.choseDelemp:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdateemp:hover{
+	font-size: 20px;
+	cursor: pointer;
 }
 .form_queryemp{
 	height: 100%;
 	width: 200px;
 	margin: 0 auto;
 }
-
+.form_addemp{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_updateemp{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_delemp{
+	width: 200px;
+	margin: 0 auto;
+}
 /* -------------------------------------工资项目管理---------------------------------- */
-.salproject_div{
+.salproject_manage_div{
 	width: 800px;
 	min-height: 600px;
 	margin:10px auto;
 	border: 1px solid #aaa;
+}
+.salproject_header{
+	height: 40px;
+	widows: 100%;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+.choseQuerysalproject,.choseAddsalproject,.choseUpdatesalproject,.choseDelsalproject{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:150px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseQuerysalproject,.choseAddsalproject,.choseUpdatesalproject{
+	border-right: 1px solid #aaa;
+}
+.choseQuerysalproject:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseAddsalproject:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseDelsalproject:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseUpdatesalproject:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.form_querysalproject{
+	height: 100%;
+	width: 200px;
+	margin: 0 auto;
+}
+.form_addsalproject{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_updatesalproject{
+	width: 200px;
+	margin: 0 auto;
+}
+.form_delsalproject{
+	width: 200px;
+	margin: 0 auto;
 }
 
 /* -------------------------------------------固定工资管理------------------- */
@@ -163,7 +254,7 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQuery_regularsal,.choseUpdata_regularsal{
+.choseQuery_regularsal,.choseUpdate_regularsal{
 	display: inline-block;
 	float: left;
 	height: 40px;
@@ -179,7 +270,7 @@
 	font-size: 20px;
 	cursor: pointer;
 }
-.choseUpdata_regularsal:hover{
+.choseUpdate_regularsal:hover{
 	font-size: 20px;
 	cursor: pointer;
 }
@@ -207,7 +298,7 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQuery_enterdata,.choseUpdata_enterdata{
+.choseQuery_enterdata,.choseUpdate_enterdata{
 	display: inline-block;
 	float: left;
 	height: 40px;
@@ -223,7 +314,7 @@
 	font-size: 20px;
 	cursor: pointer;
 }
-.choseUpdata_enterdata:hover{
+.choseUpdate_enterdata:hover{
 	font-size: 20px;
 	cursor: pointer;
 }

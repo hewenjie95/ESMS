@@ -69,20 +69,25 @@
 					welcome!
 					
 				</div>
+<!-- 部门管理 -->
 				<div class="div_dept_manage" style="display: none;">
 					<div class="dept_manage_div">
 						<div class="dept_header">
 							<ul style="margin: 0;padding: 0;">
 								<li class="choseQuerydept">查询部门</li>
 								<li class="choseAdddept" >增加部门</li>
+								<li class="choseUpdatedept" >修改部门</li>
+								<li class="choseDeldept" >删除部门</li>
 							</ul>
 						</div><hr/>
+						<div>
 						<div class="query_dept">
 							<h4>请输入部门编号或名称进行查询：</h4>
 							<div class="div_form_querydept">
 								<form action="" name="" class="myform form_querydept">
 									<input type="text" placeholder="部门编号/名称" class="get_deptcondition"><br/><br/>
-									<button class="btn btn-primary btn_query_dept" type="button">提交</button>
+									<button class="btn btn-primary btn_query_dept" type="button">查询</button><br/><br/>
+									<button class="btn btn-primary btn_queryall_dept" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
@@ -95,73 +100,188 @@
 								<button class="btn btn-primary btn_add_dept" type="button">提交</button>
 							</form>
 						</div>
+						<div class="update_dept" style="display: none;">
+							<h4>请输入修改部门的编号：</h4>
+							<form action="" name="" class="myform form_updatedept">
+								<input type="text" placeholder="部门编号" class="update_get_deptno"><br/><br/>
+								<input type="text" placeholder="部门名称" class="update_get_dname"><br/><br/>
+								<input type="text" placeholder="部门地址" class="update_get_loc"><br/><br/>
+								<button class="btn btn-primary btn_update_dept" type="button">提交</button>
+							</form>
+						</div>
+						<div class="del_dept" style="display: none;">
+							<h4>请输入删除部门的编号：</h4>
+							<form action="" name="" class="myform form_deldept">
+								<input type="text" placeholder="部门编号" class="del_get_deptno"><br/><br/>
+								<button class="btn btn-primary btn_del_dept" type="button">提交</button>
+							</form>
+						</div>
+						</div>
 						<hr/>
 					</div>
 				</div>
+<!-- 岗位管理 -->
 				<div class="div_job_manage" style="display: none;">
 					<div class="job_manage_div">
 						<div class="job_header">
 							<ul style="margin: 0;padding: 0;">
 								<li class="choseQueryjob">查询岗位</li>
 								<li class="choseAddjob" >增加岗位</li>
+								<li class="choseUpdatejob" >修改岗位</li>
+								<li class="choseDeljob" >删除岗位</li>
 							</ul>
 						</div><hr/>
+						<div>
 						<div class="query_job">
 							<h4>请输入岗位编号或名称进行查询：</h4>
 							<div class="div_form_queryjob">
 								<form action="" name="" class="myform form_queryjob">
-									请输入岗位编号：<br/>
-									<input type="text" placeholder="岗位编号" class="get_jobno"><br/><br/>
-									请输入岗位名称：<br/>
-									<input type="text" placeholder="岗位名称" class="get_jname"><br/><br/>
-									<button class="btn btn-primary btn_query_job" type="button">提交</button>
+									<input type="text" placeholder="岗位编号/名称" class="get_jobcondition"><br/><br/>
+									<button class="btn btn-primary btn_query_job" type="button">查询</button><br/><br/>
+									<button class="btn btn-primary btn_queryall_job" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
 						<div class="add_job" style="display: none;">
 							<h4>请输入新增岗位的信息：</h4>
+							<form action="" name="" class="myform form_addjob">
+								<input type="text" placeholder="岗位编号" class="get_jobno"><br/><br/>
+								<input type="text" placeholder="岗位名称" class="get_dname"><br/><br/>
+								<input type="text" placeholder="岗位地址" class="get_loc"><br/><br/>
+								<button class="btn btn-primary btn_add_job" type="button">提交</button>
+							</form>
+						</div>
+						<div class="update_job" style="display: none;">
+							<h4>请输入修改岗位的编号：</h4>
+							<form action="" name="" class="myform form_updatejob">
+								<input type="text" placeholder="岗位编号" class="update_get_jobno"><br/><br/>
+								<input type="text" placeholder="岗位名称" class="update_get_dname"><br/><br/>
+								<input type="text" placeholder="岗位地址" class="update_get_loc"><br/><br/>
+								<button class="btn btn-primary btn_update_job" type="button">提交</button>
+							</form>
+						</div>
+						<div class="del_job" style="display: none;">
+							<h4>请输入删除岗位的编号：</h4>
+							<form action="" name="" class="myform form_deljob">
+								<input type="text" placeholder="岗位编号" class="del_get_jobno"><br/><br/>
+								<button class="btn btn-primary btn_del_job" type="button">提交</button>
+							</form>
+						</div>
 						</div>
 						<hr/>
 					</div>
 				</div>
+<!-- 员工管理 -->
 				<div class="div_emp_manage" style="display: none;">
 					<div class="emp_manage_div">
 						<div class="emp_header">
 							<ul style="margin: 0;padding: 0;">
 								<li class="choseQueryemp">查询员工</li>
 								<li class="choseAddemp" >增加员工</li>
+								<li class="choseUpdateemp" >修改员工</li>
+								<li class="choseDelemp" >删除员工</li>
 							</ul>
 						</div><hr/>
+						<div>
 						<div class="query_emp">
 							<h4>请输入员工编号或名称进行查询：</h4>
 							<div class="div_form_queryemp">
 								<form action="" name="" class="myform form_queryemp">
-									请输入员工编号：<br/>
-									<input type="text" placeholder="员工编号" class="get_empno"><br/><br/>
-									请输入员工名称：<br/>
-									<input type="text" placeholder="员工名称" class="get_ename"><br/><br/>
-									<button class="btn btn-primary btn_query_emp" type="button">提交</button>
+									<input type="text" placeholder="员工编号/名称" class="get_empcondition"><br/><br/>
+									<button class="btn btn-primary btn_query_emp" type="button">查询</button><br/><br/>
+									<button class="btn btn-primary btn_queryall_emp" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
 						<div class="add_emp" style="display: none;">
 							<h4>请输入新增员工的信息：</h4>
+							<form action="" name="" class="myform form_addemp">
+								<input type="text" placeholder="员工编号" class="get_empno"><br/><br/>
+								<input type="text" placeholder="员工名称" class="get_dname"><br/><br/>
+								<input type="text" placeholder="员工地址" class="get_loc"><br/><br/>
+								<button class="btn btn-primary btn_add_emp" type="button">提交</button>
+							</form>
+						</div>
+						<div class="update_emp" style="display: none;">
+							<h4>请输入修改员工的编号：</h4>
+							<form action="" name="" class="myform form_updateemp">
+								<input type="text" placeholder="员工编号" class="update_get_empno"><br/><br/>
+								<input type="text" placeholder="员工名称" class="update_get_dname"><br/><br/>
+								<input type="text" placeholder="员工地址" class="update_get_loc"><br/><br/>
+								<button class="btn btn-primary btn_update_emp" type="button">提交</button>
+							</form>
+						</div>
+						<div class="del_emp" style="display: none;">
+							<h4>请输入删除员工的编号：</h4>
+							<form action="" name="" class="myform form_delemp">
+								<input type="text" placeholder="员工编号" class="del_get_empno"><br/><br/>
+								<button class="btn btn-primary btn_del_emp" type="button">提交</button>
+							</form>
+						</div>
 						</div>
 						<hr/>
 					</div>
 				</div>
-				<div class="div_salproject" style="display: none;">
-					<div class="salproject_div">
-						<h4>工资项目信息列表</h4><hr/>
 
+<!-- 工资项目管理 -->
+				<div class="div_salproject_manage" style="display: none;">
+					<div class="salproject_manage_div">
+						<div class="salproject_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseQuerysalproject">查询工资项目</li>
+								<li class="choseAddsalproject" >增加工资项目</li>
+								<li class="choseUpdatesalproject" >修改工资项目</li>
+								<li class="choseDelsalproject" >删除工资项目</li>
+							</ul>
+						</div><hr/>
+						<div>
+						<div class="query_salproject">
+							<h4>请输入工资项目编号或名称进行查询：</h4>
+							<div class="div_form_querysalproject">
+								<form action="" name="" class="myform form_querysalproject">
+									<input type="text" placeholder="工资项目编号/名称" class="get_salprojectcondition"><br/><br/>
+									<button class="btn btn-primary btn_query_salproject" type="button">查询</button><br/><br/>
+									<button class="btn btn-primary btn_queryall_salproject" type="button">查询所有</button>
+								</form>
+							</div>
+						</div>
+						<div class="add_salproject" style="display: none;">
+							<h4>请输入新增工资项目的信息：</h4>
+							<form action="" name="" class="myform form_addsalproject">
+								<input type="text" placeholder="工资项目编号" class="get_salprojectno"><br/><br/>
+								<input type="text" placeholder="工资项目名称" class="get_dname"><br/><br/>
+								<input type="text" placeholder="工资项目地址" class="get_loc"><br/><br/>
+								<button class="btn btn-primary btn_add_salproject" type="button">提交</button>
+							</form>
+						</div>
+						<div class="update_salproject" style="display: none;">
+							<h4>请输入修改工资项目的编号：</h4>
+							<form action="" name="" class="myform form_updatesalproject">
+								<input type="text" placeholder="工资项目编号" class="update_get_salprojectno"><br/><br/>
+								<input type="text" placeholder="工资项目名称" class="update_get_dname"><br/><br/>
+								<input type="text" placeholder="工资项目地址" class="update_get_loc"><br/><br/>
+								<button class="btn btn-primary btn_update_salproject" type="button">提交</button>
+							</form>
+						</div>
+						<div class="del_salproject" style="display: none;">
+							<h4>请输入删除工资项目的编号：</h4>
+							<form action="" name="" class="myform form_delsalproject">
+								<input type="text" placeholder="工资项目编号" class="del_get_salprojectno"><br/><br/>
+								<button class="btn btn-primary btn_del_salproject" type="button">提交</button>
+							</form>
+						</div>
+						</div>
+						<hr/>
 					</div>
 				</div>
+
+<!-- 固定工资管理 -->
 				<div class="div_regularsal" style="display: none;">
 					<div class="regularsal_div">
 						<div class="regularsal_header">
 							<ul style="margin: 0;padding: 0;">
 								<li class="choseQuery_regularsal">查询固定工资信息</li>
-								<li class="choseUpdata_regularsal" >维护固定工资信息</li>
+								<li class="choseUpdate_regularsal" >维护固定工资信息</li>
 							</ul>
 						</div><hr/>
 						<div class="query_regularsal">
@@ -176,7 +296,7 @@
 								</form>
 							</div>
 						</div>
-						<div class="updata_regularsal" style="display: none;">
+						<div class="update_regularsal" style="display: none;">
 							<h4>请输入固定工资信息：</h4>
 						</div>
 						<hr/>
@@ -187,7 +307,7 @@
 						<div class="enterdata_header">
 							<ul style="margin: 0;padding: 0;">
 								<li class="choseQuery_enterdata">查询导入项目信息</li>
-								<li class="choseUpdata_enterdata" >维护导入项目信息</li>
+								<li class="choseUpdate_enterdata" >维护导入项目信息</li>
 							</ul>
 						</div><hr/>
 						<div class="query_enterdata">
@@ -206,7 +326,7 @@
 								</form>
 							</div>
 						</div>
-						<div class="updata_enterdata" style="display: none;">
+						<div class="update_enterdata" style="display: none;">
 							<h4>请输入导入项目信息：</h4>
 						</div>
 						<hr/>

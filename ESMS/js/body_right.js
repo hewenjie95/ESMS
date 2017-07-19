@@ -1,47 +1,100 @@
 /*------------------------------------------------部门管理-------------------------------*/
 $('.choseQuerydept').on('click',function(){
 	$('.query_dept').show();
-	$('.add_dept').hide();
+	$('.query_dept').siblings().hide();
 	$('.hide_adddiv').remove();
 });
 $('.choseAdddept').on('click',function(){
 	$('.add_dept').show();
-	$('.query_dept').hide();
+	$('.add_dept').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseUpdatedept').on('click',function(){
+	$('.update_dept').show();
+	$('.update_dept').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseDeldept').on('click',function(){
+	$('.del_dept').show();
+	$('.del_dept').siblings().hide();
 	$('.hide_adddiv').remove();
 });
 
 /*-------------------------------------------------岗位管理------------------------------*/
 $('.choseQueryjob').on('click',function(){
 	$('.query_job').show();
-	$('.add_job').hide();
+	$('.query_job').siblings().hide();
 	$('.hide_adddiv').remove();
 });
 $('.choseAddjob').on('click',function(){
 	$('.add_job').show();
-	$('.query_job').hide();
+	$('.add_job').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseUpdatejob').on('click',function(){
+	$('.update_job').show();
+	$('.update_job').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseDeljob').on('click',function(){
+	$('.del_job').show();
+	$('.del_job').siblings().hide();
 	$('.hide_adddiv').remove();
 });
 
 /*-------------------------------------------------员工管理------------------------------*/
 $('.choseQueryemp').on('click',function(){
 	$('.query_emp').show();
-	$('.add_emp').hide();
+	$('.query_emp').siblings().hide();
 	$('.hide_adddiv').remove();
 });
 $('.choseAddemp').on('click',function(){
 	$('.add_emp').show();
-	$('.query_emp').hide();
+	$('.add_emp').siblings().hide();
 	$('.hide_adddiv').remove();
 });
+$('.choseUpdateemp').on('click',function(){
+	$('.update_emp').show();
+	$('.update_emp').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseDelemp').on('click',function(){
+	$('.del_emp').show();
+	$('.del_emp').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+
+/*-------------------------------------------------工资项目管理------------------------------*/
+$('.choseQuerysalproject').on('click',function(){
+	$('.query_salproject').show();
+	$('.query_salproject').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseAddsalproject').on('click',function(){
+	$('.add_salproject').show();
+	$('.add_salproject').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseUpdatesalproject').on('click',function(){
+	$('.update_salproject').show();
+	$('.update_salproject').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseDelsalproject').on('click',function(){
+	$('.del_salproject').show();
+	$('.del_salproject').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+
 
 /*-------------------------------------------------固定工资管理------------------------------*/
 $('.choseQuery_regularsal').on('click',function(){
 	$('.query_regularsal').show();
-	$('.updata_regularsal').hide();
+	$('.update_regularsal').hide();
 	$('.hide_adddiv').remove();
 });
-$('.choseUpdata_regularsal').on('click',function(){
-	$('.updata_regularsal').show();
+$('.choseUpdate_regularsal').on('click',function(){
+	$('.update_regularsal').show();
 	$('.query_regularsal').hide();
 	$('.hide_adddiv').remove();
 });
@@ -49,11 +102,11 @@ $('.choseUpdata_regularsal').on('click',function(){
 /*-------------------------------------------------导入项目管理------------------------------*/
 $('.choseQuery_enterdata').on('click',function(){
 	$('.query_enterdata').show();
-	$('.updata_enterdata').hide();
+	$('.update_enterdata').hide();
 	$('.hide_adddiv').remove();
 });
-$('.choseUpdata_enterdata').on('click',function(){
-	$('.updata_enterdata').show();
+$('.choseUpdate_enterdata').on('click',function(){
+	$('.update_enterdata').show();
 	$('.query_enterdata').hide();
 	$('.hide_adddiv').remove();
 });

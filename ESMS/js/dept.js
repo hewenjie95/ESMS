@@ -4,80 +4,7 @@ $(function(){
 
 
 function dept(){
-	/*-------------------------------------------------------------加载所有部门-------------------------------------------------------------------*/
-	$('.li_dept_manage').on('click',function(){
-		$('.hide_adddiv').remove();
-		var loginUrl = 'dept/query';
-		var deptcondition="";
-		var param = {
-				query: deptcondition
-		};
-		// param = JSON.stringify(param);
-		publicDom.post(loginUrl,param,function(response){
-				if (response.code == 1001) {
-					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
-						"<div class='panel-heading'>部门信息</div>"+
-						"<table class='table addtr_querydept'>"+
-						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
-						"</table></div>");
-					var dept = response.data;
-					for( var i=0;i < dept.length;i++ ){
-						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disabled value='"+dept[i].deptno+"'></input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disabled value='"+dept[i].dname+"'></input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disabled value='"+dept[i].loc+"'></input></td>"+
-							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
-							"</td></tr>");
-					}				
-				}
-				else {
-					layer.msg('错误');
-				}
-			},function(err){
-				layer.msg('错误');
-			});
-	});
-	$('.choseQuerydept').on('click',function(){
-		$('.hide_adddiv').remove();
-		var loginUrl = 'dept/query';
-		var deptcondition="";
-		var param = {
-				query: deptcondition
-		};
-		// param = JSON.stringify(param);
-		publicDom.post(loginUrl,param,function(response){
-				if (response.code == 1001) {
-					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
-						"<div class='panel-heading'>部门信息</div>"+
-						"<table class='table addtr_querydept'>"+
-						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
-						"</table></div>");
-					var dept = response.data;
-					for( var i=0;i < dept.length;i++ ){
-						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disabled value='"+dept[i].deptno+"'></input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disabled value='"+dept[i].dname+"'></input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disabled value='"+dept[i].loc+"'></input></td>"+
-							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
-							"</td></tr>");
-					}
-					
-				}
-				else {
-					layer.msg('错误');
-				}
-			},function(err){
-				layer.msg('错误');
-			});
-	});
 	
-
 /*----------------------------------------------------------------------------查询部门-------------------------------------------*/
 	$('.btn_query_dept').click(function(){
 		$('.hide_adddiv').remove();
@@ -101,29 +28,56 @@ function dept(){
 					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
 						"<div class='panel-heading'>部门信息</div>"+
 						"<table class='table addtr_querydept'>"+
-						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th><th>操作</th></tr></tbody>"+	
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
 						"</table></div>");
 					var dept = response.data;
 					for( var i=0;i < dept.length;i++ ){
 						$('.addtr_querydept').append(
-							"<tr class='trBox'><td class='td_deptno'><input class='input_disable input_dept' disabled value='"+dept[i].deptno+"'></input></td>"+
-							"<td class='td_dname'><input class='input_disable input_dname' disabled value='"+dept[i].dname+"'></input></td>"+
-							"<td class='td_loc'><input class='input_disable input_loc' disabled value='"+dept[i].loc+"'></input></td>"+
-							"<td><button type='button' class='btn btn-default btn_updata' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-edit' aria-hidden='true'></span></button>"+
-							"<button type='button' class='btn btn-default btn_del' aria-label='Left Align'>"+
-  							"<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>"+
-							"</td></tr>");
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
 					}
 					
 				}
 				else {
-					layer.msg('错误');
+					layer.msg('错误1');
 				}
 			},function(err){
-				layer.msg('错误');
+				layer.msg('错误2');
 			});
 	})
+
+	$('.btn_queryall_dept').click(function(){
+		$('.hide_adddiv').remove();
+		
+		var deptcondition = '';
+		var loginUrl = 'dept/query';
+		/*console.log(user_name);
+		console.log(user_password);*/
+		var param = {
+				query: deptcondition
+		};
+		// param = JSON.stringify(param);
+		publicDom.post(loginUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
+						"<div class='panel-heading'>部门信息</div>"+
+						"<table class='table addtr_querydept'>"+
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
+						"</table></div>");
+					var dept = response.data;
+					for( var i=0;i < dept.length -1;i++ ){
+						$('.addtr_querydept').append(
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+					}
+					
+				}
+				else {
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+			});
+	})
+
 
 
 /*-------------------------------------------------------增加部门------------------------------------------*/
@@ -168,14 +122,96 @@ function dept(){
 					}
 				}
 				else {
-					layer.msg('错误');
+					layer.msg('错误1');
 				}
 			},function(err){
-				layer.msg('错误');
+				layer.msg('错误2');
 			});
 	})
 
-	$('.btn_updata').on('click',function(){
-		$(this).parents('.trBox').find('input').attr('disabled','false');
+/*----------------------------------------------------------------------------修改部门-------------------------------------------*/
+	$('.btn_update_dept').click(function(){
+		$('.hide_adddiv').remove();
+		var deptno = $('.update_get_deptno').val();
+		var dname = $('.update_get_dname').val();
+		var loc = $('.update_get_loc').val();
+		var updateUrl = 'dept/update';
+		if($('.update_get_deptno').val()==""||$('.update_get_dname').val()==""||$('.update_get_loc').val()==""){
+			layer.msg('部门信息不能为为空！',function(){
+				return false;
+			});
+			return false;
+		};
+		/*console.log(user_name);
+		console.log(user_password);*/
+		var param = {
+				deptno: deptno,
+				dname: dname,
+				loc: loc
+		};
+		// param = JSON.stringify(param);
+		publicDom.post(updateUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
+						"<div class='panel-heading'>部门信息</div>"+
+						"<table class='table addtr_querydept'>"+
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
+						"</table></div>");
+					var dept = response.data;
+					for( var i=0;i < dept.length;i++ ){
+						$('.addtr_querydept').append(
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+					}
+					
+				}
+				else {
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+			});
 	})
+
+/*----------------------------------------------------------------------------修改部门-------------------------------------------*/
+	$('.btn_del_dept').click(function(){
+		$('.hide_adddiv').remove();
+		var deptno = $('.del_get_deptno').val();
+		var delUrl = 'dept/delete';
+		console.log(deptno);
+		if($('.del_get_deptno').val()==""){
+			layer.msg('部门编号不能为为空！',function(){
+				return false;
+			});
+			return false;
+		};
+		console.log(deptno);
+		var param = {
+				deptno: deptno
+		};
+		console.log(param);
+		// param = JSON.stringify(param);
+		publicDom.post(delUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querydept'>"+
+						"<div class='panel-heading'>部门信息</div>"+
+						"<table class='table addtr_querydept'>"+
+						"<tbody><tr><th>编号</th><th>名称</th><th>所在地</th></tr></tbody>"+	
+						"</table></div>");
+					var dept = response.data;
+					for( var i=0;i < dept.length;i++ ){
+						$('.addtr_querydept').append(
+							"<tr><td>"+dept[i].deptno+"</td><td>"+dept[i].dname+"</td><td>"+dept[i].loc+"</td></tr>");
+					}
+					
+				}
+				else {
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+			});
+	})
+
+
+	
 }

@@ -53,13 +53,13 @@ function dept(){
 		var dname = $('.get_dname').val();
 		var loc = $('.get_loc').val();
 		var loginUrl = 'dept/insert';
-		if($('.get_deptdeptno').val()==""||$('.get_deptdname').val()==""||$('.get_deptdloc').val()==""){
+		if($('.get_deptno').val()==""||$('.get_dname').val()==""||$('.get_loc').val()==""){
 			layer.msg('请输入完整的部门信息',function(){
 				return false;
 			});
 			return false;
 		};
-		if($('.get_deptdeptno').val().length>4){
+		if($('.get_deptno').val().length>4){
 			layer.msg('部门编号长度不能大于4',function(){
 				return false;
 			});

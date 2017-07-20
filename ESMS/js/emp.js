@@ -32,7 +32,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -47,10 +51,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseQueryemp').click(function(){
@@ -79,7 +90,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -94,10 +109,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseUpdateemp').click(function(){
@@ -126,7 +148,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -141,10 +167,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseDelemp').click(function(){
@@ -173,7 +206,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -188,10 +225,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.li_emp_manage').click(function(){
@@ -220,7 +264,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -235,10 +283,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	
@@ -269,7 +324,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -284,10 +343,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 
@@ -314,7 +380,11 @@ function emp(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+<<<<<<< HEAD
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -329,10 +399,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 
@@ -356,10 +433,19 @@ function emp(){
 			hiredate:hiredate,
 			position:position
 		}
+<<<<<<< HEAD
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+		console.log(param);
+		publicDom.post(queryUrl,param,function(response){
+					console.log(response.code);
+				if (response.code == 1001) {
+					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -374,10 +460,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 
@@ -389,10 +482,19 @@ function emp(){
 		var param={
 			empno:empno
 		}
+<<<<<<< HEAD
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
 						"<div class='panel-heading'>员工信息</div>"+
+=======
+		console.log(param);
+		publicDom.post(queryUrl,param,function(response){
+					console.log(response.code);
+				if (response.code == 1001) {
+					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
+						"<div class='panel-heading'>岗位信息</div>"+
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_queryemp'><tr><th>员工编号</th><th>员工名称</th><th>性别</th><th>年龄</th>"+
 						"<th>岗位编号</th><th>部门编号</th><th>雇用时间</th>"+	
@@ -407,10 +509,17 @@ function emp(){
 					
 				}
 				else {
+<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
+=======
+					layer.msg('错误1');
+				}
+			},function(err){
+				layer.msg('错误2');
+>>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 

@@ -17,11 +17,7 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
-<<<<<<< HEAD
 						"<div class='panel-heading'>工资项目信息</div>"+
-=======
-						"<div class='panel-heading'>岗位信息</div>"+
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_querysalproject'><tr><th>工资项目编号</th><th>工资项目名称</th><th>事件</th><th>操作</th>"+
 						"<th>系数</th>"+	
@@ -31,7 +27,6 @@ function salproject(){
 						var action='';
 						switch(salproject[i].leftOperand){
 							case 0:
-<<<<<<< HEAD
 								action='基本工资';break;
 							case 1:
 								action='公司代付';break;
@@ -50,25 +45,6 @@ function salproject(){
 							case 8:
 								action='奖金';break;
 							default: action ='';
-=======
-								action='基本工资',break;
-							case 1:
-								action='公司代付',break;
-							case 2:
-								action='病假',break;
-							case 3:
-								action='事假',break;
-							case 4:
-								action='迟到',break;
-							case 5:
-								action='早退',break;
-							case 6:
-								action='旷工',break;
-							case 7:
-								action='加班',break;
-							case 8:
-								action='奖金',break;
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						}
 						$('.addtr_querysalproject').append(
 							"<tr><td>"+salproject[i].ind+"</td><td>"+salproject[i].name+"</td><td>"+action+"</td>"+
@@ -78,17 +54,10 @@ function salproject(){
 					
 				}
 				else {
-<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
-=======
-					layer.msg('错误1');
-				}
-			},function(err){
-				layer.msg('错误2');
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseAddsalproject').click(function(){
@@ -103,11 +72,7 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
-<<<<<<< HEAD
 						"<div class='panel-heading'>工资项目信息</div>"+
-=======
-						"<div class='panel-heading'>岗位信息</div>"+
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_querysalproject'><tr><th>工资项目编号</th><th>工资项目名称</th><th>事件</th><th>操作</th>"+
 						"<th>系数</th>"+	
@@ -117,7 +82,6 @@ function salproject(){
 						var action='';
 						switch(salproject[i].leftOperand){
 							case 0:
-<<<<<<< HEAD
 								action='基本工资';break;
 							case 1:
 								action='公司代付';break;
@@ -136,25 +100,6 @@ function salproject(){
 							case 8:
 								action='奖金';break;
 							default: action ='';
-=======
-								action='基本工资',break;
-							case 1:
-								action='公司代付',break;
-							case 2:
-								action='病假',break;
-							case 3:
-								action='事假',break;
-							case 4:
-								action='迟到',break;
-							case 5:
-								action='早退',break;
-							case 6:
-								action='旷工',break;
-							case 7:
-								action='加班',break;
-							case 8:
-								action='奖金',break;
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						}
 						$('.addtr_querysalproject').append(
 							"<tr><td>"+salproject[i].ind+"</td><td>"+salproject[i].name+"</td><td>"+action+"</td>"+
@@ -164,17 +109,10 @@ function salproject(){
 					
 				}
 				else {
-<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
-=======
-					layer.msg('错误1');
-				}
-			},function(err){
-				layer.msg('错误2');
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseUpdatesalproject').click(function(){
@@ -189,11 +127,7 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
-<<<<<<< HEAD
 						"<div class='panel-heading'>工资项目信息</div>"+
-=======
-						"<div class='panel-heading'>岗位信息</div>"+
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_querysalproject'><tr><th>工资项目编号</th><th>工资项目名称</th><th>事件</th><th>操作</th>"+
 						"<th>系数</th>"+	
@@ -203,7 +137,6 @@ function salproject(){
 						var action='';
 						switch(salproject[i].leftOperand){
 							case 0:
-<<<<<<< HEAD
 								action='基本工资';break;
 							case 1:
 								action='公司代付';break;
@@ -222,25 +155,6 @@ function salproject(){
 							case 8:
 								action='奖金';break;
 							default: action ='';
-=======
-								action='基本工资',break;
-							case 1:
-								action='公司代付',break;
-							case 2:
-								action='病假',break;
-							case 3:
-								action='事假',break;
-							case 4:
-								action='迟到',break;
-							case 5:
-								action='早退',break;
-							case 6:
-								action='旷工',break;
-							case 7:
-								action='加班',break;
-							case 8:
-								action='奖金',break;
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						}
 						$('.addtr_querysalproject').append(
 							"<tr><td>"+salproject[i].ind+"</td><td>"+salproject[i].name+"</td><td>"+action+"</td>"+
@@ -250,17 +164,10 @@ function salproject(){
 					
 				}
 				else {
-<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
-=======
-					layer.msg('错误1');
-				}
-			},function(err){
-				layer.msg('错误2');
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.choseDelsalproject').click(function(){
@@ -275,11 +182,7 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
-<<<<<<< HEAD
 						"<div class='panel-heading'>工资项目信息</div>"+
-=======
-						"<div class='panel-heading'>岗位信息</div>"+
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_querysalproject'><tr><th>工资项目编号</th><th>工资项目名称</th><th>事件</th><th>操作</th>"+
 						"<th>系数</th>"+	
@@ -289,7 +192,6 @@ function salproject(){
 						var action='';
 						switch(salproject[i].leftOperand){
 							case 0:
-<<<<<<< HEAD
 								action='基本工资';break;
 							case 1:
 								action='公司代付';break;
@@ -308,25 +210,6 @@ function salproject(){
 							case 8:
 								action='奖金';break;
 							default: action ='';
-=======
-								action='基本工资',break;
-							case 1:
-								action='公司代付',break;
-							case 2:
-								action='病假',break;
-							case 3:
-								action='事假',break;
-							case 4:
-								action='迟到',break;
-							case 5:
-								action='早退',break;
-							case 6:
-								action='旷工',break;
-							case 7:
-								action='加班',break;
-							case 8:
-								action='奖金',break;
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						}
 						$('.addtr_querysalproject').append(
 							"<tr><td>"+salproject[i].ind+"</td><td>"+salproject[i].name+"</td><td>"+action+"</td>"+
@@ -336,17 +219,10 @@ function salproject(){
 					
 				}
 				else {
-<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
 				layer.msg('请求失败');
-=======
-					layer.msg('错误1');
-				}
-			},function(err){
-				layer.msg('错误2');
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 			});
 	});
 	$('.li_salproject').click(function(){
@@ -361,11 +237,7 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
-<<<<<<< HEAD
 						"<div class='panel-heading'>工资项目信息</div>"+
-=======
-						"<div class='panel-heading'>岗位信息</div>"+
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						"<table class='table'>"+
 						"<tbody class='addtr_querysalproject'><tr><th>工资项目编号</th><th>工资项目名称</th><th>事件</th><th>操作</th>"+
 						"<th>系数</th>"+	
@@ -375,7 +247,6 @@ function salproject(){
 						var action='';
 						switch(salproject[i].leftOperand){
 							case 0:
-<<<<<<< HEAD
 								action='基本工资';break;
 							case 1:
 								action='公司代付';break;
@@ -394,25 +265,6 @@ function salproject(){
 							case 8:
 								action='奖金';break;
 							default: action ='';
-=======
-								action='基本工资',break;
-							case 1:
-								action='公司代付',break;
-							case 2:
-								action='病假',break;
-							case 3:
-								action='事假',break;
-							case 4:
-								action='迟到',break;
-							case 5:
-								action='早退',break;
-							case 6:
-								action='旷工',break;
-							case 7:
-								action='加班',break;
-							case 8:
-								action='奖金',break;
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 						}
 						$('.addtr_querysalproject').append(
 							"<tr><td>"+salproject[i].ind+"</td><td>"+salproject[i].name+"</td><td>"+action+"</td>"+
@@ -422,7 +274,6 @@ function salproject(){
 					
 				}
 				else {
-<<<<<<< HEAD
 					layer.msg('输入数据有误');
 				}
 			},function(err){
@@ -673,13 +524,4 @@ function salproject(){
 
 
 
-=======
-					layer.msg('错误1');
-				}
-			},function(err){
-				layer.msg('错误2');
-			});
-	});
-
->>>>>>> dc3de82557ead74a7d719e90d49ad417f5ca5588
 }

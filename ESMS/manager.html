@@ -193,9 +193,16 @@
 							<h4>请输入部门编号或名称进行查询：</h4>
 							<div class="div_form_queryemp">
 								<form action="" name="" class="myform form_queryemp">
-									<input type="text" placeholder="部门编号/名称" class="get_empcondition"><br/><br/>
+									<input type="text" placeholder="员工编号" class="queryemp_get_empno">
+									<input type="text" placeholder="员工名称" class="queryemp_get_ename"><br/><br/>
+									<input type="text" placeholder="部门编号" class="queryemp_get_deptno">
+									<input type="text" placeholder="岗位编号" class="queryemp_get_jobno"><br/><br/>
+									<input type="text" placeholder="年龄" class="queryemp_get_minage">--
+									<input type="text" placeholder="年龄" class="queryemp_get_maxage"><br/><br/>
+									<input type="date" placeholder="" class="queryemp_get_startdate">---
+									<input type="date" placeholder="" class="queryemp_get_stopdate"><br/><br/>
+									<input type="text" placeholder="员工性别" class="queryemp_get_sex">(男：f/女：m)<br/><br/>
 									<button class="btn btn-primary btn_query_emp" type="button">查询</button><br/><br/>
-									<button class="btn btn-primary btn_queryall_emp" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
@@ -253,34 +260,68 @@
 							<h4>请输入工资项目编号或名称进行查询：</h4>
 							<div class="div_form_querysalproject">
 								<form action="" name="" class="myform form_querysalproject">
-									<input type="text" placeholder="工资项目编号/名称" class="get_salprojectcondition"><br/><br/>
+									<input type="text" placeholder="工资项目编号" class="queryproject_get_projectno"><br/><br/>
+									<input type="text" placeholder="工资项目名称" class="queryproject_get_pname"><br/><br/>
 									<button class="btn btn-primary btn_query_salproject" type="button">查询</button><br/><br/>
-									<button class="btn btn-primary btn_queryall_salproject" type="button">查询所有</button>
 								</form>
 							</div>
 						</div>
 						<div class="add_salproject" style="display: none;">
 							<h4>请输入新增工资项目的信息：</h4>
 							<form action="" name="" class="myform form_addsalproject">
-								<input type="text" placeholder="工资项目编号" class="get_salprojectno"><br/><br/>
-								<input type="text" placeholder="工资项目名称" class="get_dname"><br/><br/>
-								<input type="text" placeholder="工资项目地址" class="get_loc"><br/><br/>
+								<input type="text" placeholder="工资项目编号" class="addproject_get_projectno"><br/><br/>
+								<input type="text" placeholder="工资项目名称" class="addproject_get_pname"><br/><br/>
+								<select class="addproject_get_leftOperand">
+									<option value="0">基本工资</option>
+  									<option value="1">公司代付</option>
+  									<option value="2">病假</option>
+  									<option value="3">事假</option>
+  									<option value="4">迟到</option>
+  									<option value="5">早退</option>
+  									<option value="6">旷工</option>
+  									<option value="7">加班</option>
+  									<option value="8">奖金</option>
+								</select>
+								<select class="addproject_get_operater">
+									<option value="+">+</option>
+  									<option value="-">-</option>
+  									<option value="*">*</option>
+  									<option value="/">/</option>
+								</select><br/><br/>
+								<input type="text" placeholder="系数" class="addproject_get_rightOperand"><br/><br/>
 								<button class="btn btn-primary btn_add_salproject" type="button">提交</button>
 							</form>
 						</div>
 						<div class="update_salproject" style="display: none;">
 							<h4>请输入修改工资项目的信息：</h4>
 							<form action="" name="" class="myform form_updatesalproject">
-								<input type="text" placeholder="工资项目编号" class="update_get_salprojectno"><br/><br/>
-								<input type="text" placeholder="工资项目名称" class="update_get_dname"><br/><br/>
-								<input type="text" placeholder="工资项目地址" class="update_get_loc"><br/><br/>
+								<input type="text" placeholder="工资项目编号" class="updateproject_get_projectno"><br/><br/>
+								<input type="text" placeholder="工资项目名称" class="updateproject_get_pname"><br/><br/>
+								<select class="updateproject_get_leftOperand">
+									<option value="0">基本工资</option>
+  									<option value="1">公司代付</option>
+  									<option value="2">病假</option>
+  									<option value="3">事假</option>
+  									<option value="4">迟到</option>
+  									<option value="5">早退</option>
+  									<option value="6">旷工</option>
+  									<option value="7">加班</option>
+  									<option value="8">奖金</option>
+								</select>
+								<select class="updateproject_get_operater">
+									<option value="+">+</option>
+  									<option value="-">-</option>
+  									<option value="*">*</option>
+  									<option value="/">/</option>
+								</select><br/><br/>
+								<input type="text" placeholder="系数" class="updateproject_get_rightOperand"><br/><br/>
 								<button class="btn btn-primary btn_update_salproject" type="button">提交</button>
 							</form>
 						</div>
 						<div class="del_salproject" style="display: none;">
 							<h4>请输入删除工资项目的编号：</h4>
 							<form action="" name="" class="myform form_delsalproject">
-								<input type="text" placeholder="工资项目编号" class="del_get_salprojectno"><br/><br/>
+								<input type="text" placeholder="工资项目编号" class="delproject_get_salprojectno"><br/><br/>
 								<button class="btn btn-primary btn_del_salproject" type="button">提交</button>
 							</form>
 						</div>
@@ -374,5 +415,7 @@
 	<script type="text/javascript" src=".\js\body_right.js"></script>
 	<script type="text/javascript" src=".\js\dept.js"></script>
 	<script type="text/javascript" src=".\js\job.js"></script>
+	<script type="text/javascript" src=".\js\emp.js"></script>
+	<script type="text/javascript" src=".\js\salproject.js"></script>
 </body>
 </html>

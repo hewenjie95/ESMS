@@ -167,7 +167,7 @@
 }
 .form_queryemp{
 	height: 100%;
-	width: 200px;
+	width: 400px;
 	margin: 0 auto;
 }
 .form_addemp{
@@ -182,7 +182,7 @@
 	width: 200px;
 	margin: 0 auto;
 }
-.addemp_get_date,.updateemp_get_date{
+.addemp_get_date,.updateemp_get_date,.queryemp_get_startdate,.queryemp_get_stopdate{
 	height: 24px;
 }
 /* -------------------------------------工资项目管理---------------------------------- */

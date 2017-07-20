@@ -288,7 +288,7 @@
 	margin: 0 auto;
 }
 
-/* -------------------------------------------导入项目管理------------------- */
+/* -------------------------------------------考勤信息管理------------------- */
 .enterdata_div{
 	width: 800px;
 	min-height: 600px;
@@ -350,7 +350,7 @@
 	width: 130px;
 	height: 24px;
 }
-.addenterdata_get_date,.updateenterdata_get_date{
+.addenterdata_get_date,.updateenterdata_get_date,.delenterdata_get_date{
 	width: 175px;
 	height: 26px;
 }
@@ -362,13 +362,56 @@
 	margin:10px auto;
 	border: 1px solid #aaa;
 }
-.div_form_salsettle{
-	width: 400px;
-	height: 200px;
+.salsettle_header{
+	width: 600px;
+	height: 40px;
 	margin: 10px auto;
 }
-.form_salsettle{
-	height: 100%;
+.choseSettleemp,.choseSettledept,.choseIssuesal{
+	display: inline-block;
+	float: left;
+	height: 40px;
+	width:200px; 
+	background-color: #9cf;
+	line-height: 40px;
+	text-align: center;
+}
+.choseSettleemp,.choseSettledept{
+	border-right: 1px solid #aaa;
+}
+.choseSettleemp:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseSettledept:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.choseIssuesal:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.form_settleemp{
 	width: 200px;
 	margin: 0 auto;
+}
+.settleemp_get_date{
+	width: 175px;
+	height: 26px;
+}
+.form_settledept{
+	width: 200px;
+	margin: 0 auto;
+}
+.settledept_get_date{
+	width: 175px;
+	height: 26px;
+}
+.form_issuesal{
+	width: 200px;
+	margin: 0 auto;
+}
+.issuesal_get_date{
+	width: 175px;
+	height: 26px;
 }

@@ -24,8 +24,6 @@
 		li{
 			list-style: none;
 		}
-
-
 	</style>
 </head>
 <body>
@@ -412,9 +410,10 @@
 							</form>
 						</div>
 						<div class="del_enterdata" style="display: none;">
-							<h4>请输入删除考勤的编号：</h4>
+							<h4>请输入员工编号和日期：</h4>
 							<form action="" name="" class="myform form_delenterdata">
-								<input type="text" placeholder="考勤编号" class="del_get_enterdatano"><br/><br/>
+								<input type="text" placeholder="员工编号" class="delenterdata_get_empno"><br/><br/>
+								<input type="date" placeholder="" class="delenterdata_get_date"><br/><br/>
 								<button class="btn btn-primary btn_del_enterdata" type="button">提交</button>
 							</form>
 						</div>
@@ -422,24 +421,56 @@
 						<hr/>
 					</div>
 				</div>
+
+<!-- 工资结算 -->
 				<div class="div_salsettle" style="display: none;">
 					<div class="salsettle_div">
-						<h4>工资结算</h4><hr/>
-						<div class="div_form_salsettle">
-							<form action="" name="" class="myform form_salsettle">
-								请输入部门编号：<br/>
-								<input type="text" placeholder="部门编号" class="get_deptno"><br/><br/>
-								<button class="btn btn-primary btn_salsettle" type="button">提交</button>
-							</form>
+						<div class="salsettle_header">
+							<ul style="margin: 0;padding: 0;">
+								<li class="choseSettleemp">结算员工工资</li>
+								<li class="choseSettledept" >结算部门工资</li>
+								<li class="choseIssuesal" >发放工资</li>
+							</ul>
+						</div><hr/>
+						<div>
+						<div class="settle_emp">
+							<h4>请输入员工编号和日期：</h4>
+							<div class="div_form_settleemp">
+								<form action="" name="" class="myform form_settleemp">
+									<input type="text" placeholder="员工编号" class="settleemp_get_empno"><br/><br/>
+									<input type="date" placeholder="" class="settleemp_get_date"><br/><br/>
+									<button class="btn btn-primary btn_settle_emp" type="button">结算</button><br/><br/>
+								</form>
+							</div>
 						</div>
-						<hr/>
+						<div class="settle_dept" style="display: none;">
+							<h4>请输入部门编号和日期：</h4>
+							<div class="div_form_settledept">
+								<form action="" name="" class="myform form_settledept">
+									<input type="text" placeholder="部门编号" class="settledept_get_deptno"><br/><br/>
+									<input type="date" placeholder="" class="settledept_get_date"><br/><br/>
+									<button class="btn btn-primary btn_settle_dept" type="button">结算</button><br/><br/>
+								</form>
+							</div>
+						</div>
+						<div class="issue_sal" style="display: none;">
+							<h4>请输入员工编号和日期：</h4>
+							<div class="div_form_issuesal">
+								<form action="" name="" class="myform form_issuesal">
+									<input type="text" placeholder="员工编号" class="issuesal_get_empno"><br/><br/>
+									<input type="date" placeholder="" class="issuesal_get_date"><br/><br/>
+									<button class="btn btn-primary btn_issue_sal" type="button">发放</button><br/><br/>
+								</form>
+							</div>
+						</div>
+						</div><hr/>
 					</div>
 				</div>
+
+
 				<div class="div_aboutus" style="display: none;">
 					about us
 				</div>
-			</div>
-		</div>
 	</section>
 
 	<script type="text/javascript" src=".\jquery.js"></script>
@@ -453,5 +484,6 @@
 	<script type="text/javascript" src=".\js\emp.js"></script>
 	<script type="text/javascript" src=".\js\salproject.js"></script>
 	<script type="text/javascript" src=".\js\enterdata.js"></script>
+	<script type="text/javascript" src=".\js\salsettle.js"></script>
 </body>
 </html>

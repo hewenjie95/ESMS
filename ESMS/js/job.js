@@ -246,7 +246,30 @@ function job(){
 		publicDom.post(addUrl,param,function(response){
 				if (response.code == 1001) {
 					layer.msg('添加成功');
-					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var jobno='';
+		var jname='';
+		var minsal='';
+		var maxsal='';
+		var queryUrl= 'position/query';
+		var param={
+			ind : jobno,
+			name : jname,
+			minSalary : minsal,
+			maxSalary : maxsal
+		}
+
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.job_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
 						"<div class='panel-heading'>岗位信息</div>"+
 						"<table class='table addtr_queryjob'>"+
 						"<tbody><tr><th>编号</th><th>名称</th><th>基本工资</th></tr></tbody>"+	
@@ -254,8 +277,9 @@ function job(){
 					var job = response.data;
 					for( var i=0;i < job.length;i++ ){
 						$('.addtr_queryjob').append(
-							"<tr><td>"+job[i].jobno+"</td><td>"+job[i].jname+"</td><td>"+job[i].baseSalary+"</td></tr>");
+							"<tr><td>"+job[i].ind+"</td><td>"+job[i].name+"</td><td>"+job[i].baseSalary+"</td></tr>");
 					}
+					
 				}
 				else {
 					layer.msg('输入数据有误');
@@ -286,7 +310,31 @@ function job(){
 		publicDom.post(updateUrl,param,function(response){
 				if (response.code == 1001) {
 					layer.msg('修改成功');
-					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
+					
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var jobno='';
+		var jname='';
+		var minsal='';
+		var maxsal='';
+		var queryUrl= 'position/query';
+		var param={
+			ind : jobno,
+			name : jname,
+			minSalary : minsal,
+			maxSalary : maxsal
+		}
+
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.job_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
 						"<div class='panel-heading'>岗位信息</div>"+
 						"<table class='table addtr_queryjob'>"+
 						"<tbody><tr><th>编号</th><th>名称</th><th>基本工资</th></tr></tbody>"+	
@@ -294,7 +342,7 @@ function job(){
 					var job = response.data;
 					for( var i=0;i < job.length;i++ ){
 						$('.addtr_queryjob').append(
-							"<tr><td>"+job[i].jobno+"</td><td>"+job[i].jname+"</td><td>"+job[i].baseSalary+"</td></tr>");
+							"<tr><td>"+job[i].ind+"</td><td>"+job[i].name+"</td><td>"+job[i].baseSalary+"</td></tr>");
 					}
 					
 				}
@@ -323,7 +371,30 @@ function job(){
 		publicDom.post(delUrl,param,function(response){
 				if (response.code == 1001) {
 					layer.msg('删除成功');
-					$('.dept_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var jobno='';
+		var jname='';
+		var minsal='';
+		var maxsal='';
+		var queryUrl= 'position/query';
+		var param={
+			ind : jobno,
+			name : jname,
+			minSalary : minsal,
+			maxSalary : maxsal
+		}
+
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.job_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryjob'>"+
 						"<div class='panel-heading'>岗位信息</div>"+
 						"<table class='table addtr_queryjob'>"+
 						"<tbody><tr><th>编号</th><th>名称</th><th>基本工资</th></tr></tbody>"+	
@@ -331,7 +402,7 @@ function job(){
 					var job = response.data;
 					for( var i=0;i < job.length;i++ ){
 						$('.addtr_queryjob').append(
-							"<tr><td>"+job[i].jobno+"</td><td>"+job[i].jname+"</td><td>"+job[i].baseSalary+"</td></tr>");
+							"<tr><td>"+job[i].ind+"</td><td>"+job[i].name+"</td><td>"+job[i].baseSalary+"</td></tr>");
 					}
 					
 				}

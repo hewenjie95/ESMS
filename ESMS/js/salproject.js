@@ -4,7 +4,7 @@ $(function(){
 
 function salproject(){
 
-	/*-----------------------------------------------------------查询所有--------------------------------------------------*/
+/*-----------------------------------------------------------查询所有--------------------------------------------------*/
 	$('.choseQuerysalproject').click(function(){
 		$('.hide_adddiv').remove();
 		var queryUrl= 'calculateItem/query';
@@ -281,7 +281,7 @@ function salproject(){
 			});
 	});
 
-	/*-----------------------------------------------------------查询--------------------------------------------------*/
+/*-----------------------------------------------------------查询--------------------------------------------------*/
 	$('.btn_query_salproject').click(function(){
 		$('.hide_adddiv').remove();
 		var queryUrl= 'calculateItem/query';
@@ -358,6 +358,25 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 			console.log(response.code);
 				if (response.code == 1001) {
+					layer.msg('增加成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+	/*显示所有*/
+		var queryUrl= 'calculateItem/query';
+		var projectno='';
+		var pname='';
+		var param={
+			ind:projectno,
+			name:pname
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
 						"<div class='panel-heading'>工资项目信息</div>"+
 						"<table class='table'>"+
@@ -421,6 +440,25 @@ function salproject(){
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('修改成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+	/*显示所有*/
+		var queryUrl= 'calculateItem/query';
+		var projectno='';
+		var pname='';
+		var param={
+			ind:projectno,
+			name:pname
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
 						"<div class='panel-heading'>工资项目信息</div>"+
 						"<table class='table'>"+
@@ -477,6 +515,26 @@ function salproject(){
 		publicDom.post(queryUrl,param,function(response){
 			console.log(response.code);
 				if (response.code == 1001) {
+					layer.msg('删除成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+
+	/*显示所有*/
+		var queryUrl= 'calculateItem/query';
+		var projectno='';
+		var pname='';
+		var param={
+			ind:projectno,
+			name:pname
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.salproject_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_querysalproject'>"+
 						"<div class='panel-heading'>工资项目信息</div>"+
 						"<table class='table'>"+
@@ -521,7 +579,6 @@ function salproject(){
 				layer.msg('请求失败');
 			});
 	});
-
 
 
 }

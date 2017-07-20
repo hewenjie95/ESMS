@@ -313,6 +313,39 @@ function emp(){
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('增加成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var queryUrl= 'emp/query';
+		var empno='';
+		var ename='';
+		var deptno='';
+		var gender='';
+		var minAge='';
+		var maxAge='';
+		var startdate='';
+		var enddate='';
+		var position='';
+		var param={
+			empno:empno,
+			ename:ename,
+			deptno:deptno,
+			gender:gender,
+			minAge:minAge,
+			maxAge:maxAge,
+			startdate:startdate,
+			enddate:enddate,
+			position:position
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
 						"<div class='panel-heading'>员工信息</div>"+
 						"<table class='table'>"+
@@ -358,6 +391,39 @@ function emp(){
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('修改成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var queryUrl= 'emp/query';
+		var empno='';
+		var ename='';
+		var deptno='';
+		var gender='';
+		var minAge='';
+		var maxAge='';
+		var startdate='';
+		var enddate='';
+		var position='';
+		var param={
+			empno:empno,
+			ename:ename,
+			deptno:deptno,
+			gender:gender,
+			minAge:minAge,
+			maxAge:maxAge,
+			startdate:startdate,
+			enddate:enddate,
+			position:position
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.emp_manage_div').append("<div class='panel panel-default hide_adddiv adddiv_queryemp'>"+
 						"<div class='panel-heading'>员工信息</div>"+
 						"<table class='table'>"+
@@ -388,6 +454,39 @@ function emp(){
 		var empno=$('.delemp_get_empno').val();
 		var param={
 			empno:empno
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					layer.msg('删除成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+		/*显示所有*/
+		var queryUrl= 'emp/query';
+		var empno='';
+		var ename='';
+		var deptno='';
+		var gender='';
+		var minAge='';
+		var maxAge='';
+		var startdate='';
+		var enddate='';
+		var position='';
+		var param={
+			empno:empno,
+			ename:ename,
+			deptno:deptno,
+			gender:gender,
+			minAge:minAge,
+			maxAge:maxAge,
+			startdate:startdate,
+			enddate:enddate,
+			position:position
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {

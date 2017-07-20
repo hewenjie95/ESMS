@@ -123,3 +123,18 @@ $('.choseDelenterdata').on('click',function(){
 
 
 /*-------------------------------------------------工资结算------------------------------------------*/
+$('.choseSettleemp').on('click',function(){
+	$('.settle_emp').show();
+	$('.settle_emp').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseSettledept').on('click',function(){
+	$('.settle_dept').show();
+	$('.settle_dept').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseIssuesal').on('click',function(){
+	$('.issue_sal').show();
+	$('.issue_sal').siblings().hide();
+	$('.hide_adddiv').remove();
+});

@@ -286,6 +286,31 @@ function enterdata(){
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('插入成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+	/*显示所有信息*/
+		var queryUrl= 'attendance/query';
+		var deptno='';
+		var empno='';
+		var startdate='';
+		var enddate='';
+		var date='';
+		var param={
+			deptno:deptno,
+			empno:empno,
+			date:date,
+			startdate:startdate,
+			enddate:enddate
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.enterdata_div').append("<div class='panel panel-default hide_adddiv adddiv_queryenterdata'>"+
 						"<div class='panel-heading'>考勤信息</div>"+
 						"<table class='table'>"+
@@ -308,9 +333,10 @@ function enterdata(){
 			},function(err){
 				layer.msg('请求失败');
 			});
+
 	});
 
-/*-----------------------------------------------------------插入--------------------------------------------------*/
+/*-----------------------------------------------------------修改--------------------------------------------------*/
 	$('.btn_update_enterdata').click(function(){
 		$('.hide_adddiv').remove();
 		var queryUrl= 'attendance/update';
@@ -343,6 +369,31 @@ function enterdata(){
 		}
 		publicDom.post(queryUrl,param,function(response){
 				if (response.code == 1001) {
+					layer.msg('修改成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+	/*显示所有信息*/
+		var queryUrl= 'attendance/query';
+		var deptno='';
+		var empno='';
+		var startdate='';
+		var enddate='';
+		var date='';
+		var param={
+			deptno:deptno,
+			empno:empno,
+			date:date,
+			startdate:startdate,
+			enddate:enddate
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
 					$('.enterdata_div').append("<div class='panel panel-default hide_adddiv adddiv_queryenterdata'>"+
 						"<div class='panel-heading'>考勤信息</div>"+
 						"<table class='table'>"+
@@ -365,6 +416,80 @@ function enterdata(){
 			},function(err){
 				layer.msg('请求失败');
 			});
+
 	});
+
+/*-----------------------------------------------------------修改--------------------------------------------------*/
+	$('.btn_del_enterdata').click(function(){
+		$('.hide_adddiv').remove();
+		var queryUrl= 'attendance/delete';
+
+		var empno=$('.delenterdata_get_empno').val();
+		var date=$('.delenterdata_get_date').val();
+		if($('.delenterdata_get_empno').val()==''||$('.delenterdata_get_date').val()==''){
+			layer.msg('员工编号和日期不能为空',function(){
+				return false;
+			});
+			return false;
+		};
+		
+		var param={
+			empno:empno,
+			date:date
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					layer.msg('删除成功');
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+	/*显示所有信息*/
+		var queryUrl= 'attendance/query';
+		var deptno='';
+		var empno='';
+		var startdate='';
+		var enddate='';
+		var date='';
+		var param={
+			deptno:deptno,
+			empno:empno,
+			date:date,
+			startdate:startdate,
+			enddate:enddate
+		}
+		publicDom.post(queryUrl,param,function(response){
+				if (response.code == 1001) {
+					$('.enterdata_div').append("<div class='panel panel-default hide_adddiv adddiv_queryenterdata'>"+
+						"<div class='panel-heading'>考勤信息</div>"+
+						"<table class='table'>"+
+						"<tbody class='addtr_queryenterdata'><tr><th>考勤编号</th><th>员工编号</th><th>日期</th><th>病假</th>"+
+						"<th>事假</th><th>迟到</th><th>早退</th><th>旷工</th><th>加班</th>"+	
+						"</tr></tbody></table></div>");
+					var enterdata = response.data;
+					for( var i=0;i < enterdata.length;i++ ){
+						$('.addtr_queryenterdata').append(
+							"<tr><td>"+enterdata[i].ind+"</td><td>"+enterdata[i].empno+"</td><td>"+enterdata[i].date+"</td><td>"+enterdata[i].sickLeave+"</td>"+
+							"<td>"+enterdata[i].personalLeave+"<td>"+enterdata[i].late+"</td>"+
+							"<td>"+enterdata[i].earlyLeave+"</td><td>"+enterdata[i].neglect+"</td><td>"+enterdata[i].overTime+"</td><tr>"
+							);
+					}
+					
+				}
+				else {
+					layer.msg('输入数据有误');
+				}
+			},function(err){
+				layer.msg('请求失败');
+			});
+
+
+
+	});
+
 
 }

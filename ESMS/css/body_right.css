@@ -167,7 +167,7 @@
 }
 .form_queryemp{
 	height: 100%;
-	width: 200px;
+	width: 400px;
 	margin: 0 auto;
 }
 .form_addemp{
@@ -182,7 +182,7 @@
 	width: 200px;
 	margin: 0 auto;
 }
-.addemp_get_date,.updateemp_get_date{
+.addemp_get_date,.updateemp_get_date,.queryemp_get_startdate,.queryemp_get_stopdate{
 	height: 24px;
 }
 /* -------------------------------------工资项目管理---------------------------------- */
@@ -301,35 +301,58 @@
 	margin-left: 100px;
 	margin-top: 10px;
 }
-.choseQuery_enterdata,.choseUpdate_enterdata{
+.choseQueryenterdata,.choseAddenterdata,.choseUpdateenterdata,.choseDelenterdata{
 	display: inline-block;
 	float: left;
 	height: 40px;
-	width:300px; 
+	width:150px; 
 	background-color: #9cf;
 	line-height: 40px;
 	text-align: center;
 }
-.choseQuery_enterdata{
+.choseQueryenterdata,.choseAddenterdata,.choseUpdateenterdata{
 	border-right: 1px solid #aaa;
 }
-.choseQuery_enterdata:hover{
+.choseQueryenterdata:hover{
 	font-size: 20px;
 	cursor: pointer;
 }
-.choseUpdate_enterdata:hover{
+.choseAddenterdata:hover{
 	font-size: 20px;
 	cursor: pointer;
 }
-.div_form_query_enterdata{
-	width: 500px;
-	height: 250px;
-	margin: 10px auto;
+.choseDelenterdata:hover{
+	font-size: 20px;
+	cursor: pointer;
 }
-.form_query_enterdata{
+.choseUpdateenterdata:hover{
+	font-size: 20px;
+	cursor: pointer;
+}
+.form_queryenterdata{
 	height: 100%;
-	width: 350px;
+	width: 400px;
 	margin: 0 auto;
+}
+.form_addenterdata{
+	width: 400px;
+	margin: 0 auto;
+}
+.form_updateenterdata{
+	width: 400px;
+	margin: 0 auto;
+}
+.form_delenterdata{
+	width: 200px;
+	margin: 0 auto;
+}
+.enterdataquery_get_startdate,.enterdataquery_get_stopdate,{
+	width: 130px;
+	height: 24px;
+}
+.addenterdata_get_date,.updateenterdata_get_date{
+	width: 175px;
+	height: 26px;
 }
 
 /* ----------------------------------------工资结算--------------------------------------- */

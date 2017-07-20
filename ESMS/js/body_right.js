@@ -99,16 +99,27 @@ $('.choseUpdate_regularsal').on('click',function(){
 	$('.hide_adddiv').remove();
 });
 
-/*-------------------------------------------------导入项目管理------------------------------*/
-$('.choseQuery_enterdata').on('click',function(){
+/*-------------------------------------------------考勤信息管理------------------------------*/
+$('.choseQueryenterdata').on('click',function(){
 	$('.query_enterdata').show();
-	$('.update_enterdata').hide();
+	$('.query_enterdata').siblings().hide();
 	$('.hide_adddiv').remove();
 });
-$('.choseUpdate_enterdata').on('click',function(){
+$('.choseAddenterdata').on('click',function(){
+	$('.add_enterdata').show();
+	$('.add_enterdata').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+$('.choseUpdateenterdata').on('click',function(){
 	$('.update_enterdata').show();
-	$('.query_enterdata').hide();
+	$('.update_enterdata').siblings().hide();
 	$('.hide_adddiv').remove();
 });
+$('.choseDelenterdata').on('click',function(){
+	$('.del_enterdata').show();
+	$('.del_enterdata').siblings().hide();
+	$('.hide_adddiv').remove();
+});
+
 
 /*-------------------------------------------------工资结算------------------------------------------*/
